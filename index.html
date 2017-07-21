@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html>
-<meta charset="UTF-8">
+
 
    <header>
      <title>BLOC YAMS</title>
+     <meta name="viewport" content="width=device-width, initial scale=1">
+     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300">
+     <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+     <link rel="stylesheet" type="text/css" href="styles/main.css">
+     <link rel="stylesheet" type="text/css" href="styles/landing.css">
+     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
    </header>
 
-   <body>
-     <nav>
-       <h1> NAVIGATION BAR </h1> <!--Navigation Bar -->
+
+     <body class="landing">
+     <nav class="navbar"><!--Navigation Bar -->
+       <a href="index.html" class="logo">
+         <img src="assets/images/bloc_jams_logo.png" alt="bloc yams logo">
+       </a>
+       <div class="links-container">
+         <a href="collection.html" class="navbar-link">collection</a>
+       </div>
      </nav>
 
-     <section> <!--Hero Content -->
-       <h1>Bloc Yams</h1>
-       <h3>Turnip the music!</h3>
+     <section class="hero-content"> <!--Hero Content -->
+        <h1 class="hero-title">Turnip the music!</h1>
      </section>
 
-     <section> <!-- Selling Points -->
-        <h5>Choose your music</h5>
-         <p>The world is full of music; why should you have to listen to music that someone else chose?</p>
+     <section class="selling-points container clearfix">
+       <div class="point column third"> <!-- Selling Points -->
+         <span class="ion-music-note"></span>
+         <h5 class="point-title">Choose your music</h5>
+         <p class="point-description">The world is full of music; why should you have to listen to music that someone else chose?</p>
+       </div>
 
-       <aside>
-         <h5>Unlimited / Streaming / Ad-Free</h5>
-         <p>No arbitrary limits. No distractions.</p>
-       </aside>
+       <div class="point column third">
+         <span class="ion-radio-waves"></span>
+         <h5 class="point-title">Unlimited / Streaming / Ad-Free</h5>
+         <p class="point-description">No arbitrary limits. No distractions.</p>
+       </div>
 
-       <article>
-         <h5>Mobile Enabled</h5>
-         <p>Listen to your music on the go. This streaming service is available on all mobile platforms.</p>
-       </article>
+         <div class="point column third">
+           <span class="ion-iphone"></span>
+           <h5 class="point-title">Mobile Enabled</h5>
+           <p class="point-description">Listen to your music on the go. This streaming service is available on all mobile platforms.</p>
+         </div>
+       </section>
+     <script src="scripts/landing.js"></script>
 
-
-
-</body>
+     </body>
 </html>
