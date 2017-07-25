@@ -26,6 +26,20 @@ var albumPicasso = {
          { title: 'Wrong phone number', duration: '2:15'}
      ]
  };
+ var albumJebediah = {
+     title: 'Springfield, USA.',
+     artist: 'Jebediah Springfield',
+     label: 'EMF',
+     year: '1863',
+     albumArtUrl: 'assets/images/neon-flora.png',
+     songs: [
+         { title: 'Razamataz Nation', duration: '11:01' },
+         { title: 'Heathen Hemp', duration: '55:01' },
+         { title: 'Founder\'s Foundry', duration: '32:21'},
+         { title: 'Hate Pants', duration: '37:14' },
+         { title: 'WHY.', duration: '22:15'}
+     ]
+ };
  var createSongRow = function(songNumber, songName, songLength) {
      var template =
         '<tr class="album-view-song-item">'
@@ -37,13 +51,15 @@ var albumPicasso = {
 
      return template;
  };
+ // #1
+ var albumTitle = document.getElementsByClassName('album-view-title')[0];
+ var albumArtist = document.getElementsByClassName('album-view-artist')[0];
+ var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
+ var albumImage = document.getElementsByClassName('album-cover-art')[0];
+ var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
+
  var setCurrentAlbum = function(album) {
-     // #1
-     var albumTitle = document.getElementsByClassName('album-view-title')[0];
-     var albumArtist = document.getElementsByClassName('album-view-artist')[0];
-     var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
-     var albumImage = document.getElementsByClassName('album-cover-art')[0];
-     var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
+
 
      // #2
      albumTitle.firstChild.nodeValue = album.title;
@@ -62,4 +78,14 @@ var albumPicasso = {
 
  window.onload = function() {
      setCurrentAlbum(albumPicasso);
+ 
+var albums = [albumPicasso, albumMarconi, albumJebediah];
+var index = 1;
+ albumImage.addEventListener("click", function(event) {
+   setCurrentAlbum(albums[index]);
+   index++;
+   if (index == albums.length) {
+     index = 0;
+   }
+ });
  };

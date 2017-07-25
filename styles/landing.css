@@ -12,9 +12,9 @@ body.landing {
      -webkit-transform: scaleX(0.9) translateY(10rem);
      -moz-transform: scaleX(0.9) translateY(10rem);
      transform: scaleX(0.9) translateY(10rem);
-     -webkit-transition: all 2s ease-in-out;
-     -moz-transition: all 2s ease-in-out;
-     transition: all 2s ease-in-out;
+     -webkit-transition: all 1s ease-in-out;
+     -moz-transition: all 1s ease-in-out;
+     transition: all 1s ease-in-out;
      -webkit-transition-delay: 0.2s;
      -moz-transition-delay: 0.2s;
      transition-delay: 0.2s;
@@ -46,9 +46,9 @@ body.landing {
      -webkit-transform: scaleX(0.9) translateY(10rem);
      -moz-transform: scaleX(0.9) translateY(10rem);
      transform: scaleX(0.9) translateY(10rem);
-     -webkit-transition: all 2s ease-in-out;
-     -moz-transition: all 2s ease-in-out;
-     transition: all 2s ease-in-out;
+     -webkit-transition: all 1s ease-in-out;
+     -moz-transition: all 1s ease-in-out;
+     transition: all 1s ease-in-out;
      -webkit-transition-delay: 0.2s;
      -moz-transition-delay: 0.2s;
      transition-delay: 0.2s;
