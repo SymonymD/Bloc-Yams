@@ -86,7 +86,12 @@ var pauseButtonTemplate = '<a class="album-song-button"><span class="ion-pause">
          songListContainer.addEventListener('mouseover', function(event) {
 
          if (event.target.parentElement.className === 'album-view-song-item') {
-             event.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate;
+           var songItem = getSongItem(event.target);
+ 
+             if (songItem.getAttribute('data-song-number') !== currentlyPlayingSong) {
+                 songItem.innerHTML = playButtonTemplate;
+             }
+
          }
      });
 
@@ -116,15 +121,26 @@ var pauseButtonTemplate = '<a class="album-song-button"><span class="ion-pause">
         }
       });
     };
-
+    var child = document.getElementsByClassName('album-view-title')[0];
+     var noParent = document.querySelector('html');
     var findParentByClassName = function(element, targetClass) {
     if (element) {
         var currentParent = element.parentElement;
-        while (currentParent.className !== targetClass && currentParent.className !== null) {
-            currentParent = currentParent.parentElement;
-        } 
-        return currentParent;
-    }
+        if (currentParent) {
+             while (currentParent.className && currentParent.className != targetClass) {
+                 currentParent = currentParent.parentElement;
+             }
+
+             if (currentParent.className == targetClass) {
+                 return currentParent;
+             } else {
+                 alert("No parent with that class name found.");
+             }
+         } else {
+            alert("No parent found.");
+        }
+        }
+        findParentByClassName(child, 'album-view');
 };
 var getSongItem = function(element) {
     switch (element.className) {
