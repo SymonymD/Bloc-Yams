@@ -10,6 +10,7 @@
      <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
      <link rel="stylesheet" type="text/css" href="styles/main.css">
      <link rel="stylesheet" type="text/css" href="styles/album.css">
+     <link rel="stylesheet" type="text/css" href="styles/player_bar.css">
      <link rel="stylesheet" type="text/css" href="styles/normalize.css">
    </head>
    <body class="album">
@@ -34,33 +35,45 @@
                  </div>
              </section>
              <table class="album-view-song-list">
-                 <tr class="album-view-song-item">
-                     <td class="song-item-number">1</td>
-                     <td class="song-item-title">Blue</td>
-                     <td class="song-item-duration">X:XX</td>
-                 </tr>
-                 <tr class="album-view-song-item">
-                     <td class="song-item-number">2</td>
-                     <td class="song-item-title">Red</td>
-                     <td class="song-item-duration">X:XX</td>
-                 </tr>
-                 <tr class="album-view-song-item">
-                     <td class="song-item-number">3</td>
-                     <td class="song-item-title">Green</td>
-                     <td class="song-item-duration">X:XX</td>
-                 </tr>
-                 <tr class="album-view-song-item">
-                     <td class="song-item-number">4</td>
-                     <td class="song-item-title">Purple</td>
-                     <td class="song-item-duration">X:XX</td>
-                 </tr>
-                 <tr class="album-view-song-item">
-                     <td class="song-item-number">5</td>
-                     <td class="song-item-title">Black</td>
-                     <td class="song-item-duration">X:XX</td>
-                 </tr>
+
              </table>
          </main>
+         <section class="player-bar">
+             <div class="container">
+                 <div class="control-group main-controls">
+                   <a class="previous">
+                         <span class="ion-skip-backward"></span>
+                     </a>
+                     <a class="play-pause">
+                         <span class="ion-play"></span>
+                     </a>
+                     <a class="next">
+                         <span class="ion-skip-forward"></span>
+                     </a>
+                 </div>
+                 <div class="control-group currently-playing">
+                   <h2 class="song-name">My dumb song</h2>
+                   <div class="seek-control">
+                         <div class="seek-bar">
+                             <div class="fill"></div>
+                             <div class="thumb"></div>
+                         </div>
+                         <div class="current-time">2:30</div>
+                         <div class="total-time">4:45</div>
+                     </div>
+                     <h2 class="artist-song-mobile">My dumb song - Fallout Boy</h2>
+                     <h3 class="artist-name">Fallout Boy</h3>
+                  </div>
+                 <div class="control-group volume">
+                   <span class="ion-volume-high icon"></span>
+                     <div class="seek-bar">
+                         <div class="fill"></div>
+                         <div class="thumb"></div>
+                     </div>
+                 </div>
+             </div>
+         </section>
+         <script src="scripts/album.js"></script>
 
         </body>
     </html>
